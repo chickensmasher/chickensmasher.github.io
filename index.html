@@ -1,80 +1,162 @@
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+
 <!DOCTYPE html>
 
 <style>
+	@keyframes rotatehead {
+		0%{transform: rotate(0deg);}
+		100%{transform:rotate(360deg);}
+	}
 
-    .bigTitle {
-    	color: #c3763d;
-    }
+	.big-title {
+		text-align: center;
+		font-family: 'Open-Sans', sans-serif;
+		line-height: 2px;
+		padding: 50px 0px 50px 0px;
+		height: 200px;
+	}
 
-    .lobster {
-    	font-family: Lobster;
-    }
+	.main-container {
+		background-color: #FFFFFF;
+		font-size: 20px;
+		margin: auto;
+		width: 900px;
+		padding: 50px 100px 50px 100px;
+		border: 2px solid #FFFFFF;
+		border-radius: 10px;
+		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+		font-family: 'Open-Sans', sans-serif;
+		text-align: justify;
+	}
 
-    .uglyBorder {
-    	border-width: 10px 20px 30px 40px;
-    	border-color: #a93dc3;
-    	border-style: solid;
-    }
+	.floating-box {
+		width: 700px;
+		height: 700px;
+		border: 2px solid #FFFFFF;
+		border-radius: 10px;
+		position: relative;
+		margin: auto;
+		background: linear-gradient(-45deg, #FF0000, #000000, #5E1519, #290002);
+		background-size: 400% 400%;
+		-webkit-animation: AnimationName 30s ease infinite;
+		-moz-animation: AnimationName 30s ease infinite;
+		animation: AnimationName 30s ease infinite;
+	}
 
-    .titleBorder {
-    	border-style: double;
-    	border-width: 20px 10px 40px 5px;
-    	border-color: #bbc33d;
-    }
+	.floating-head {
+		position: absolute;
+		margin: auto;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		animation: rotatehead 3s linear infinite;
+	}
 
-    .imagetest {
-    	margin-bottom: 50px;
-    }
+	.subtitle {
+		font-size: 15px;
+		text-align: center;
+		position: relative;
+		bottom: 15px;
+	}
 
-    .image2 {
-    	size: ;
-    }
+	.header {
+		background-color: #FFFFFF;
+		height: 40px;
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		right: 0px;
+		z-index: 99;
+		text-align: center;
+		box-shadow: 0 0px 10px rgba(0,0,0,0.19);
+		font-family: 'Open-Sans', sans-serif;
+		color: #000000;
+	}
 
-    .test3 {
-    	border-top-color: green;
-    	border-bottom-color: blue;
-    	border-right-color: orange;
-    	border-style: solid;
-    	border-right-width: 900px;
-    }
+	.header-link {
+		position: relative;
+		top: 8px;
+		bottom: 10px;
+		padding-right: 20px;
+		text-decoration: none;
+	}
+
+	h1 {
+		font-size: 90px;
+		color: #FFFFFF;
+		letter-spacing: -5px;
+		font-family: 'Montserrat', sans-serif;
+		text-shadow: 2px 2px #F9B5CE;
+	}
+
+	h2 {
+		font-size: 40px;
+		color: #FEB9BC;
+		font-family: 'Lobster', sans-serif;
+		font-weight: 10;
+		position: relative;
+	}
+
+	body {
+		background-color: #E5242E;
+	}
+
+	 @-webkit-keyframes AnimationName {
+	}
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
 
 </style>
 
 <html>
 
-<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
-
 <head>
 <title>THE OFFICIAL SANSA STARK FANPAGE YOUR HOME OF EVERYTHING SANSA STARK</title>
 </head>
 
-
-<body style="background-color: #c3903d">
-<h1 class="bigTitle titleBorder lobster">The OFFICIAL Sansa Stark Fanpage</h1>
-<p class="lobster" style="color:#82c33d">This is the official fan page for Sansa Stark from the hit HBO series <i>Game of Thrones</i>.</p>
-<a href="https://en.wikipedia.org/wiki/List_of_patricides"><img src="image.jpg" class="uglyBorder imagetest"></a>
-
-<div class="imagetest test3">
-<h2>SANSA FACTS</h2>
-<ul class="lobster">
-    <li>Sansa is super cool</l1>
-    <li>Sansa is the smartest person is the kingdom</li>
-    <li>Arya is a little shit</li>
-</ul>
+<body>
+<div class="header">
+<a href="" class="header-link">Sansa Facts</a>
+<a href="" class="header-link">Sansa Pics</a>
+<a href="" class="header-link">Sansa Theories</a>
+<a href="" class="header-link">Sansa Fanfics</a>
+<a href="" class="header-link">Sansa Cosplay</a>
 </div>
 
-<img height="250" src="image5.jpg">
-<img src="image3.jpeg">
-<img height="200" width="300" src="image2.jpg">
-<img src="image4.jpg">
+<div class="big-title">
+<h2 style="top: 5px">The Official</h2>
+<h1>Sansa Stark</h1>
+<h2>Fanpage</h2>
+</div>
 
-<div class="titleBorder">
-<form class="uglyBorder">Put in your email to subscribe to the official Sansa Stark fan page mailing list!<br>
-<input type="text" required>
-<button type="submit">Submit</button>
-</form>
+<div class="main-container">
+
+<p>Welcome to the official fanpage for Sansa Stark: the smartest, cleverest, and most beautiful character in HBO's hit series Game of Thrones. </p>
+<p>Be sure to subscribe to our mailing list to get notifications for the newest Sansa facts, pictures, and theories.</p>
+<div class="floating-box">
+<a href="https://en.wikipedia.org/wiki/List_of_patricides"><img src="sansahead.png" class="floating-head"></a>
+</div>
+<p class="subtitle">Sansa thinking up a plan to outsmart her enemies.</p>
+<p>Arya fans, Dreadfort fans, Jon fans, Direwolf fans, and Ned truthers are not welcome.</p>
+
 </div>
 
 </body>
-
 </html>
