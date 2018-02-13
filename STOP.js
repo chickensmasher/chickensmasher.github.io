@@ -1512,6 +1512,9 @@ $(document).ready(function () {
     $(document).on('change', '.clsDpdnLocation', assignFlightToLocation);
     $(document).on('focus', '.clsDpdnLocation', stopColdStorageRefresh);
     $(document).on('click', '#btnPanic', stopColdStorageRefresh);
+    $(document).on('click', '#btnPanic', stopColdStorageRefresh);
+    $(document).on('click', '#btnPanic', stopColdStorageRefresh);
+    $("#btnPanic").on('click', stopAutoRefresh);
 
     $(document).on('click', '.btnDeleteFlightQuantity', deleteFlightQuantity);
     $(document).on('change', '.selectQuantitySchedule', getScheduleInformation);
