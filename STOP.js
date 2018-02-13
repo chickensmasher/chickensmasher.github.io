@@ -1254,8 +1254,7 @@ var flightsRefreshRouting;
 
 var setTimers = function () {
 
-    timeRefreshRoutine = setInterval(poolingTimeRefreshRoutine, 1000);
-    flightsRefreshRouting = setInterval(poolingFlightRefreshRoutine, 2000);
+    flightsRefreshRouting = setInterval(poolingFlightRefreshRoutine, 20000);
 
 }
 
