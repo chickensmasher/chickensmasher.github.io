@@ -1541,22 +1541,19 @@ $(document).ready(function () {
 
     $(document).on('click', '.selectable', fnNavigateToItem);
 
-    $(document).on('click', '#btnPanic', stopColdStorageRefresh);
+    $(document).on('focus', '.serverTime', getServerTime);
 
     $(document).on('click', '.btnDeleteEmail', deleteCarrierEmail);
 
     $(document).on('click', '#btnDeleteFlight', fnValidateFlightOperation);
 
     $(document).on('click', '.bayHeader', displayBayChangeDialog);
-    
-    $(document).on('focus', '.serverTime', getServerTime);
 
     $(document).on('click', '.btnOpenCloseBay', openCloseBay);
 
     $(document).on('change', '.chkFluidsToAdd', allowFluidsAddSubmit)
 
     $(document).on('change', '.chkFluidsToDelete', allowDeleteFluids)
-    
     
     displayEI11Warning();
 
