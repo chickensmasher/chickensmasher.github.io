@@ -1,5 +1,4 @@
-/// <reference path="jquery-ui-1.8.24.min.js" />
-/// <reference path="Common.js" />
+
 
 var baseUrl = 'https://erp.aeromag2000.com/GestopLight/';
 
