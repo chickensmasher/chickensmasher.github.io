@@ -1226,7 +1226,7 @@ var poolingFlightRefreshRoutine = function () {
 
     if ($("#tdFlightsInProgress").length > 0) {
 
-        var url = baseUrl + "Deicing/GetDeicingFlights";
+        var url = "https://erp.aeromag2000.com/GestopLight/Deicing/GetDeicingFlights";
 
         var output = $ajaxCall(url, undefined, false, true);
 
