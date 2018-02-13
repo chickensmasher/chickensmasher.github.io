@@ -1495,7 +1495,7 @@ $(document).ready(function () {
 
     $(document).on('blur', '.uCase', capitalizeInput);
 
-    $(document).on('blur', '.setCarrier', setDefaultCarrier);
+    $(document).on('focus', '.setCarrier', stopAutoRefresh);
     
     $(document).on('change', '.clsDay', changeScheduleDay);
 
