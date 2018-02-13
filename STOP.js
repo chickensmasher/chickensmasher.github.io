@@ -1,7 +1,7 @@
 /// <reference path="jquery-ui-1.8.24.min.js" />
 /// <reference path="Common.js" />
 
-var baseUrl = 'BANANAS';
+var baseUrl;
 
 var confirmDialog = function (title, message, confirmCallBackFunction, param1, denyConfirmCallBackFunction, param2) {
 
