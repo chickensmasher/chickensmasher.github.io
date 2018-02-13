@@ -1200,20 +1200,7 @@ var selectCurrentFlightInEdit = function (flightId) {
 
 var poolingTimeRefreshRoutine = function () {
 
-    if ($(".currentTimeLabel").length > 0) {
-
-        var url = baseUrl + "Admin/GetAirportTimeLabel";
-
-        var output = $ajaxCall(url, undefined, false, true);
-
-        if (output.Successfull) {
-            if (output.SuccessResult.length < 20) {
-                $(".currentTimeLabel").text(output.SuccessResult);
-            }
-
-        };
-
-    }
+    
 
 }
 
