@@ -104,9 +104,7 @@ var $ajaxCall = function (url, data, onFailureGoToErrorPage, onFailurePopUpError
             output.Successfull = false;
             output.ErrorResult = status;
 
-            if (onFailurePopUpErrorMessage) {
-                showError(xhr);
-            }
+           
         }
     });
 
