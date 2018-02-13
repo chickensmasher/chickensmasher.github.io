@@ -59,9 +59,7 @@ var messageDialog = function (title, message, callbackOnClose) {
 
 }
 
-var showError = function (error) {
-    messageDialog("Error", $($(error.responseText)[1]).text());
-}
+
 
 var $ajaxCall = function (url, data, onFailureGoToErrorPage, onFailurePopUpErrorMessage) {
 
