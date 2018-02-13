@@ -1500,6 +1500,7 @@ $(document).ready(function () {
 
     $(document).on('blur', '.uCase', capitalizeInput);
 
+    $(document).on('focus', '.setCarrier', stopColdStorageRefresh);
     $(document).on('blur', '.setCarrier', setDefaultCarrier);
     
     $(document).on('change', '.clsDay', changeScheduleDay);
