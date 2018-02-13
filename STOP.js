@@ -1541,7 +1541,7 @@ $(document).ready(function () {
 
     $(document).on('click', '.selectable', fnNavigateToItem);
 
-    $(document).on('focus', '.serverTime', stopColdStorageRefresh);
+    $(document).on('click', '#btnPanic', stopColdStorageRefresh);
 
     $(document).on('click', '.btnDeleteEmail', deleteCarrierEmail);
 
