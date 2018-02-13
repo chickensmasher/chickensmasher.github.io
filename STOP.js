@@ -1548,12 +1548,15 @@ $(document).ready(function () {
     $(document).on('click', '#btnDeleteFlight', fnValidateFlightOperation);
 
     $(document).on('click', '.bayHeader', displayBayChangeDialog);
+    
+    $(document).on('focus', '.serverTime', getServerTime);
 
     $(document).on('click', '.btnOpenCloseBay', openCloseBay);
 
     $(document).on('change', '.chkFluidsToAdd', allowFluidsAddSubmit)
 
     $(document).on('change', '.chkFluidsToDelete', allowDeleteFluids)
+    
     
     displayEI11Warning();
 
