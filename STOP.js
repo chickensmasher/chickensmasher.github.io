@@ -1,6 +1,7 @@
+/// <reference path="jquery-ui-1.8.24.min.js" />
+/// <reference path="Common.js" />
 
-
-var baseUrl = 'https://erp.aeromag2000.com/GestopLight/';
+var baseUrl;
 
 var confirmDialog = function (title, message, confirmCallBackFunction, param1, denyConfirmCallBackFunction, param2) {
 
@@ -59,7 +60,9 @@ var messageDialog = function (title, message, callbackOnClose) {
 
 }
 
-
+var showError = function (error) {
+    messageDialog("Error", $($(error.responseText)[1]).text());
+}
 
 var $ajaxCall = function (url, data, onFailureGoToErrorPage, onFailurePopUpErrorMessage) {
 
@@ -104,7 +107,9 @@ var $ajaxCall = function (url, data, onFailureGoToErrorPage, onFailurePopUpError
             output.Successfull = false;
             output.ErrorResult = status;
 
-           
+            if (onFailurePopUpErrorMessage) {
+                showError(xhr);
+            }
         }
     });
 
@@ -1200,7 +1205,20 @@ var selectCurrentFlightInEdit = function (flightId) {
 
 var poolingTimeRefreshRoutine = function () {
 
-    
+    if ($(".currentTimeLabel").length > 0) {
+
+        var url = baseUrl + "Admin/GetAirportTimeLabel";
+
+        var output = $ajaxCall(url, undefined, false, true);
+
+        if (output.Successfull) {
+            if (output.SuccessResult.length < 20) {
+                $(".currentTimeLabel").text(output.SuccessResult);
+            }
+
+        };
+
+    }
 
 }
 
@@ -1254,7 +1272,8 @@ var flightsRefreshRouting;
 
 var setTimers = function () {
 
-    flightsRefreshRouting = setInterval(poolingFlightRefreshRoutine, 20000);
+    timeRefreshRoutine = setInterval(poolingTimeRefreshRoutine, 1000);
+    flightsRefreshRouting = setInterval(poolingFlightRefreshRoutine, 2000);
 
 }
 
@@ -1481,7 +1500,7 @@ $(document).ready(function () {
 
     $(document).on('blur', '.uCase', capitalizeInput);
 
-    $(document).on('focus', '.setCarrier', stopColdStorageRefresh);
+    $(document).on('blur', '.setCarrier', setDefaultCarrier);
     
     $(document).on('change', '.clsDay', changeScheduleDay);
 
@@ -1522,7 +1541,7 @@ $(document).ready(function () {
 
     $(document).on('click', '.selectable', fnNavigateToItem);
 
-    $(document).on('focus', '.serverTime', getServerTime);
+    $(document).on('focus', '.serverTime', stopColdStorageRefresh);
 
     $(document).on('click', '.btnDeleteEmail', deleteCarrierEmail);
 
