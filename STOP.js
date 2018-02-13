@@ -1207,7 +1207,7 @@ var poolingTimeRefreshRoutine = function () {
 
     if ($(".currentTimeLabel").length > 0) {
 
-        var url = 'https://erp.aeromag2000.com/GestopLight/' + "Admin/GetAirportTimeLabel";
+        var url = "https://erp.aeromag2000.com/GestopLight/Admin/GetAirportTimeLabel";
 
         var output = $ajaxCall(url, undefined, false, true);
 
