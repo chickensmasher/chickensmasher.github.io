@@ -1203,26 +1203,15 @@ var selectCurrentFlightInEdit = function (flightId) {
 
 }
 
-var poolingTimeRefreshRoutine = function () {
-
-    if ($(".currentTimeLabel").length > 0) {
-
-        var url = "https://erp.aeromag2000.com/GestopLight/Admin/GetAirportTimeLabel";
-
-        var output = $ajaxCall(url, undefined, false, true);
-
-        if (output.Successfull) {
-            if (output.SuccessResult.length < 20) {
-                $(".currentTimeLabel").text(output.SuccessResult);
-            }
-
-        };
-
-    }
+var poolingTimeRefreshRoutine = function () {  
 
 }
 
 var poolingFlightRefreshRoutine = function () {
+    
+}
+
+var backupFlightRefresh = function () {
 
     if ($("#tdFlightsInProgress").length > 0) {
 
@@ -1515,7 +1504,6 @@ $(document).ready(function () {
     $(document).on('click', '#btnPanic', stopColdStorageRefresh);
     $(document).on('click', '#btnPanic', stopColdStorageRefresh);
     $(document).on('click', '#btnPanic', stopColdStorageRefresh);
-    $("#btnPanic").on('click', stopAutoRefresh);
 
     $(document).on('click', '.btnDeleteFlightQuantity', deleteFlightQuantity);
     $(document).on('change', '.selectQuantitySchedule', getScheduleInformation);
