@@ -174,7 +174,7 @@ var assignFlightToLocation = function () {
 
 var assignFlightLocation = function (data) {
 
-    var url = baseUrl + "Deicing/AssignFlightLocationFromColdStorage";
+    var url = "https://erp.aeromag2000.com/GestopLight/Deicing/AssignFlightLocationFromColdStorage";
     var output = $ajaxCall(url, data, false, true);
 
     if (output.Successfull) {
